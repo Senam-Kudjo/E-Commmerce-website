@@ -1,0 +1,397 @@
+@import url('https://font.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+body {
+    width: 100%;
+    font-family: 'Spartan', sans-serif;
+    margin: 0;
+    background-image: linear-gradient(to the top hotpink, white, aliceblue, khaki, lightyellow, cyan);
+}
+
+#header {
+    display: flex;
+    background: white;
+    align-items: center;
+    padding: 20px 80px;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px lightyellow;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+#header h1 {
+    font-size: 40px;
+    font-size: bold;
+
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: hotpink;
+    font-size: 14px;
+
+    font-weight: 100;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: black;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+#navbar li a.active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: hotpink;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+#stories {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#Me {
+    width: 30%;
+    background-color: aliceblue;
+    border-radius: 10px;
+    height: 55vh;
+    margin-top: 30px;
+    padding: 15px;
+    box-shadow: 10px 10px 3px 0 rgb(231, 183, 232);
+}
+
+#mypic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-image: linear-gradient(khaki, aliceblue, yellow);
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 300px;
+}
+
+#Me h1 {
+    font-size: 20px;
+    padding-top: 5px;
+    color: grey;
+    font-weight: bolder;
+    word-spacing: 2px;
+    letter-spacing: 3px;
+}
+
+#Me h2 {
+    font-size: 20px;
+    padding-top: 7px;
+}
+
+#Me span {
+    font-size: 12px;
+    color: grey;
+    font-weight: 500;
+}
+
+#Me p {
+    font-size: 14px;
+    padding-top: 30px;
+    line-height: 25px;
+    word-spacing: 3px;
+}
+
+.mypicture {
+    height: 118px;
+    width: 118px;
+    border-radius: 50%;
+    margin-top: -18px;
+
+}
+
+#you {
+    width: 30%;
+    background-color: yellow;
+    border-radius: 10px;
+    height: 50vh;
+    margin-top: 30px;
+    padding: 15px;
+    box-shadow: 10px 10px 3px 0 rgb(148, 244, 244);
+}
+
+#you h1 {
+    font-size: 20px;
+    padding-top: 5px;
+    color: grey;
+    font-weight: bolder;
+    word-spacing: 2px;
+    letter-spacing: 3px;
+}
+
+#you h2 {
+    font-size: 20px;
+    padding-top: 7px;
+}
+
+#you span {
+    font-size: 12px;
+    color: grey;
+    font-weight: 500;
+}
+
+#you p {
+    font-size: 14px;
+    padding-top: 30px;
+    line-height: 25px;
+    word-spacing: 3px;
+}
+
+
+
+#our {
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+    height: 55vh;
+    margin-top: 30px;
+    padding: 15px;
+    box-shadow: 10px 10px 3px 0 rgb(231, 183, 232);
+}
+
+#our h1 {
+    font-size: 25px;
+    padding-top: 5px;
+    color: grey;
+    font-weight: bolder;
+    word-spacing: 2px;
+    letter-spacing: 3px;
+    padding-bottom: 5px;
+}
+
+
+#our span {
+    font-size: 12px;
+    color: grey;
+    font-weight: 500;
+}
+
+#our p {
+    font-size: 14px;
+    padding-top: 30px;
+    line-height: 25px;
+    word-spacing: 3px;
+}
+
+#balls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#theballs {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: linear-gradient(khaki, aliceblue, yellow);
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+@media (max-width:799px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        position: fixed;
+        width: 300px;
+        background-color: whitesmoke;
+        box-shadow: 0 40px 60px black;
+        padding: 80px 0 0 10px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: black;
+        padding-left: 20px;
+        font-size: 24px;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: hotpink;
+        font-size: 24px;
+    }
+
+    #lg-bag {
+        display: none;
+    }
+
+    #stories {
+
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    #Me {
+        width: 90%;
+        height: 33.5vh;
+
+    }
+
+    #you {
+        width: 95%;
+        height: 35vh;
+
+    }
+
+    #our {
+        width: 96%;
+        height: 29vh;
+
+    }
+
+}
+
+@media (max-width:799px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        position: fixed;
+        width: 300px;
+        background-color: whitesmoke;
+        box-shadow: 0 40px 60px black;
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: black;
+        padding-left: 20px;
+        font-size: 24px;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: hotpink;
+        font-size: 24px;
+    }
+
+    #homepage {
+        height: 95vh;
+        padding: 0 80px;
+        background-position: top 30% right -5%;
+    }
+}
+
+@media (max-width:477px) {
+    #header {
+        padding-left: 5px;
+    }
+
+    #header h1 {
+        font-size: 20px;
+        padding-left: 15px;
+    }
+
+    #mypic {
+        margin-top: -260px;
+        margin-left: 200px;
+        width: 0px;
+        height: 0px;
+    }
+
+    .mypicture {
+        height: 100px;
+        width: 100px;
+    }
+
+    #mypic h1 {
+        display: none;
+    }
+
+    #you p {
+        padding-top: 10px;
+    }
+
+    #you {
+        width: 95%;
+        height: 40vh;
+    }
+}

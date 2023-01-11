@@ -1,0 +1,11 @@
+<label for="category> Category: </label>
+<select id="category" name="category">
+
+<option value="facials> <a href="">Bonnets</a> </option>
+<option value="facials> <a href="">Facials</a> </option>
+<option value="facials> <a href="">Fragrance</a> </option>
+<option value="facials> <a href="">Kimonos</a> </option>
+<option value="facials> <a href="">Perfumes</a> </option>
+<option value="facials> <a href="">Scarfs</a> </option>
+
+</select>

@@ -1,0 +1,319 @@
+@import url('https://font.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+body {
+    width: 100%;
+    font-family: 'Spartan', sans-serif;
+    margin: 0;
+}
+
+#header {
+    display: flex;
+    background: white;
+    align-items: center;
+    padding: 20px 70px;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgb(228, 226, 226);
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    right: 0;
+}
+
+#header h1 {
+    font-size: 40px;
+    font-size: bold;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: hotpink;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: black;
+    transition: 0.3s ease;
+}
+
+#navbar li a.active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: hotpink;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+#belowheader {
+    /* contains the search box and the category boxes */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    padding: 0px 0px;
+}
+
+#searchygory {
+    /* supposed to control the row on which the search and category should lie */
+    padding-top: 50px;
+    /* justify-content: center;
+    align-items: flex-start; */
+    flex-direction: row;
+    padding-left: 15px;
+
+}
+
+#searchBox {
+    /* literally alters the search box */
+    width: 20%;
+    height: 35px;
+    align-items: center;
+    border-radius: 0px;
+    border-width: 0.5px;
+    justify-content: center;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    padding-bottom: 10px;
+}
+
+#categorynavbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: yellow;
+    height: 0px;
+    position: relative;
+}
+
+#categorynavbox li {
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+    padding: 0 25px;
+    justify-content: center;
+    position: relative;
+    top: -18px;
+    left: 60px;
+    flex-wrap: wrap;
+}
+
+#categorynavbox li a {
+    text-decoration: none;
+    color: grey;
+    font-weight: 600;
+}
+
+#categorynavbox li a:hover,
+#categorynavbox li a.active {
+    color: hotpink;
+    transition: 0.1s ease;
+    font-weight: 600;
+}
+
+#shopbody {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+}
+
+.productbox {
+    height: 330px;
+    width: 250px;
+    border: 1px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    box-shadow: 2px 2px 2px 2px lightblue;
+    padding: 20px;
+    margin: 50px 50px;
+    border-radius: 7px;
+    position: relative;
+    background-color: white;
+}
+
+.productbox h3 {
+    font-family: Nunito;
+    padding: 10px 8px 5px;
+    font-size: 17px;
+    color: black;
+    text-align: flex-start;
+}
+
+.productbox p {
+    /* font-family: Nunito; */
+    padding: 0 8px 10px;
+    font-size: 15px;
+    color: grey
+}
+
+.imgcon {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.buttonization {
+    background-color: lightgreen;
+    color: white;
+    border-color: lightgoldenrodyellow;
+    margin-left: 23%;
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: absolute;
+}
+
+@media (max-width:799px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        position: fixed;
+        width: 300px;
+        background-color: whitesmoke;
+        box-shadow: 0 40px 60px black;
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: black;
+        padding-left: 20px;
+        font-size: 24px;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: hotpink;
+        font-size: 24px;
+    }
+
+    #lg-bag {
+        display: none;
+    }
+
+    #categorynavbox li a {
+        font-size: 12px;
+        margin-left: -10px;
+    }
+
+    #category {
+        margin-right: 170px;
+    }
+
+
+}
+
+
+@media (max-width:477px) {
+    #header {
+        padding-left: 5px;
+    }
+
+    #header h1 {
+        font-size: 20px;
+        padding-left: 15px;
+    }
+
+    #searchBox {
+        display: none;
+    }
+
+    #categorynavbox li {
+        padding: 0 12px;
+        left: -15px;
+    }
+
+    #categorynavbox li a {
+        font-size: 9px;
+    }
+
+    .productbox {
+        margin: 40px 15px;
+        height: 300px;
+        width: 40%;
+        padding: 0px;
+    }
+
+    .imgcon {
+        width: 135px;
+        height: 180px;
+        margin-left: 8px;
+        margin-top: 8px;
+    }
+
+    .buttonization {
+        margin-left: 10%;
+        border-radius: 5px;
+        height: 30px;
+        width: 100px;
+        margin-top: 5px;
+    }
+
+    .productbox h3 {
+        font-size: 14px;
+
+    }
+
+}
